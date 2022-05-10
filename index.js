@@ -1,13 +1,21 @@
 "use strict";
 exports.__esModule = true;
-exports.Aplication = void 0;
 var GestionNotificador_1 = require("./GestionNotificador/GestionNotificador");
-var Aplication = function () {
-    var destinarios = ["123456", "ssss", "124332"];
-    var MediosNotificacion = ["S", "M", "F"];
-    var mensaje = "Holi al Elmoverse";
-    var gestionNotificador = new GestionNotificador_1["default"](destinarios, MediosNotificacion, mensaje);
-    gestionNotificador.enviarMsg();
+var Aplicacion = /** @class */ (function () {
+    function Aplicacion() {
+    }
+    Aplicacion.prototype.ejecutar = function () {
+        var destinarios = ["123456", "ssss", "124332", "elmochupon@gg.com"];
+        var MediosNotificacion = ["S", "F"];
+        var mensaje = "Holi al Elmoverse";
+        var gestionNotificador = new GestionNotificador_1["default"](destinarios, MediosNotificacion, mensaje);
+        gestionNotificador.enviarMsg();
+    };
+    return Aplicacion;
+}());
+exports["default"] = Aplicacion;
+var ejecutarS = function () {
+    var aplicacion = new Aplicacion();
+    aplicacion.ejecutar();
 };
-exports.Aplication = Aplication;
-(0, exports.Aplication)();
+ejecutarS();

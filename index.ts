@@ -1,17 +1,26 @@
-
-
 import GestionNotificador  from './GestionNotificador/GestionNotificador';
 
-export const Aplication = () => {
-    let destinarios = ["123456","ssss","124332"];
-    let MediosNotificacion=["S","M","F"];
-    let mensaje="Holi al Elmoverse"
+export default class Aplicacion{
 
-    let gestionNotificador = new GestionNotificador(destinarios,MediosNotificacion,mensaje);
-    gestionNotificador.enviarMsg();
-
+    constructor(){}
+    ejecutar(){
+        let destinarios = ["123456","ssss","124332","elmochupon@gg.com"];
+        let MediosNotificacion=["S","F"];
+        let mensaje="Holi al Elmoverse"
+    
+        let gestionNotificador = new GestionNotificador(destinarios,MediosNotificacion,mensaje);
+        gestionNotificador.enviarMsg();
+    }
+    
 }
 
-Aplication();
+const ejecutarS=()=>{
+    let aplicacion = new Aplicacion();
+    aplicacion.ejecutar()
+}
+ejecutarS();
+
+
+
 
 
