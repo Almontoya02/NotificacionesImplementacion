@@ -3,26 +3,27 @@ import { INotificador } from "./INotificador";
 export default class MsgEmpresarial implements INotificador {
 
     enviarMsg(destinatarios:string[],mensaje:string){
-        let validation = this.validacionDestinatariosPorNotificador(destinatarios);
+
         console.log("*********************************")
         console.log("Enviando por medio de Email empresarial........")
-        if(validation){
+
             console.log("Su mensaje: ",mensaje);    
             console.log("Ha sido enviado por medio de MsgEmpresarial a los siguientes destinatarios: ");
             destinatarios.map((destinatario)=>{
-                return console.log(destinatario)
+                if(this.validacionDestinatariosPorNotificador(destinatario)){
+                    console.log("Enviado a: ",destinatario)
+                }else{
+                    console.log("No se pudo enviar a:",destinatario," ya que no cumplió con la validación")
+                }
             })
             console.log("*********************************")
-        }else{
             console.log("Revise que si sean emails correctos bro")
-        }
-    }
-    validacionDestinatariosPorNotificador(destinatarios:string[]){
-        let validation=false
 
-        destinatarios.map((destinatario)=>{
-            this.esCorreoElectronico(destinatario)?validation=true:validation=false;
-        })
+    }
+    validacionDestinatariosPorNotificador(destinatario:string){
+        let validation=false
+        this.esCorreoElectronico(destinatario)?validation=true:validation=false;
+
         return validation
         
     }
