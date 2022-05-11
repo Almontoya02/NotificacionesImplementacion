@@ -4,8 +4,8 @@ export default class Aplicacion{
 
     constructor(){}
     ejecutar(){
-        let destinarios = ["123456","ssss","124332","elmochupon@gg.com"];
-        let MediosNotificacion=["S","F"];
+        let destinarios = ["123456","ssss","124332","elmo@gg.com"];
+        let MediosNotificacion=["S","M"];
         let mensaje="Holi al Elmoverse"
     
         let gestionNotificador = new GestionNotificador(destinarios,MediosNotificacion,mensaje);

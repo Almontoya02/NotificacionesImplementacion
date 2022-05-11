@@ -9,7 +9,7 @@ var GestionNotificador = /** @class */ (function () {
         this.msj = msj;
         this.MediosNotificacion = MediosNotificacion;
     }
-    GestionNotificador.prototype.enviarMsg = function () {
+    GestionNotificador.prototype.enviarMensaje = function () {
         for (var index = 0; index < this.MediosNotificacion.length; index++) {
             switch (this.MediosNotificacion[index]) {
                 case "F":

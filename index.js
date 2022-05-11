@@ -5,11 +5,11 @@ var Aplicacion = /** @class */ (function () {
     function Aplicacion() {
     }
     Aplicacion.prototype.ejecutar = function () {
-        var destinarios = ["123456", "ssss", "124332", "elmochupon@gg.com"];
-        var MediosNotificacion = ["S", "F"];
+        var destinarios = ["123456", "ssss", "124332", "elmo@gg.com"];
+        var MediosNotificacion = ["S", "M"];
         var mensaje = "Holi al Elmoverse";
         var gestionNotificador = new GestionNotificador_1["default"](destinarios, MediosNotificacion, mensaje);
-        gestionNotificador.enviarMsg();
+        gestionNotificador.enviarMensaje();
     };
     return Aplicacion;
 }());
