@@ -9,7 +9,7 @@ export default class Aplicacion{
         let mensaje="Holi al Elmoverse"
     
         let gestionNotificador = new GestionNotificador(destinarios,MediosNotificacion,mensaje);
-        gestionNotificador.enviarMsg();
+        gestionNotificador.enviarMensaje();
     }
     
 }

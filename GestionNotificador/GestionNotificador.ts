@@ -15,7 +15,7 @@ export default class GestionNotificador{
         this.MediosNotificacion=MediosNotificacion;
     }
 
-    enviarMsg(){
+    enviarMensaje(){
 
         for (let index = 0; index < this.MediosNotificacion.length; index++) {
             switch (this.MediosNotificacion[index]) {
